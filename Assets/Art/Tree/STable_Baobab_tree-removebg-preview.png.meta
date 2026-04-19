@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 3a78f99d72ab5584a8c4c875b09eaedf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6297463859909214125
+    second: STable_Baobab_tree-removebg-preview_0
+  - first:
+      213: 8567205766056320445
+    second: STable_Baobab_tree-removebg-preview_1
+  - first:
+      213: -4878542989271743261
+    second: STable_Baobab_tree-removebg-preview_2
+  - first:
+      213: 3696283648579597231
+    second: STable_Baobab_tree-removebg-preview_3
+  - first:
+      213: 4404427116685862895
+    second: STable_Baobab_tree-removebg-preview_4
+  - first:
+      213: 3093314107782469474
+    second: STable_Baobab_tree-removebg-preview_5
+  - first:
+      213: 8213312366314302316
+    second: STable_Baobab_tree-removebg-preview_6
+  - first:
+      213: -4207839424970649913
+    second: STable_Baobab_tree-removebg-preview_7
+  - first:
+      213: 5446748267467377486
+    second: STable_Baobab_tree-removebg-preview_8
+  - first:
+      213: 2048978295033345963
+    second: STable_Baobab_tree-removebg-preview_9
+  - first:
+      213: 357593584585429795
+    second: STable_Baobab_tree-removebg-preview_10
+  - first:
+      213: -8334362618930256754
+    second: STable_Baobab_tree-removebg-preview_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350404c1cf9ea98a0800000000000000
+      internalID: -6297463859909214125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 252
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd1773d044d4e670800000000000000
+      internalID: 8567205766056320445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 252
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e44cf6bffeeb4cb0800000000000000
+      internalID: -4878542989271743261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 252
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3fba60566db4330800000000000000
+      internalID: 3696283648579597231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7a821802baf1d30800000000000000
+      internalID: 4404427116685862895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 127
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 267141dbac8adea20800000000000000
+      internalID: 3093314107782469474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 127
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bac77c41c8bf170800000000000000
+      internalID: 8213312366314302316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 127
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce8dba4650ca95c0800000000000000
+      internalID: -4207839424970649913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4b0e5fe0bcb69b40800000000000000
+      internalID: 5446748267467377486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 2
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7b2f347ee6f6c10800000000000000
+      internalID: 2048978295033345963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3235c27787d66f400800000000000000
+      internalID: 357593584585429795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: STable_Baobab_tree-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e842e5dfa55665c80800000000000000
+      internalID: -8334362618930256754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e2fcbef8e9795db49a44d3f0ffa888c1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":165.0,"y":125.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      STable_Baobab_tree-removebg-preview_0: -6297463859909214125
+      STable_Baobab_tree-removebg-preview_1: 8567205766056320445
+      STable_Baobab_tree-removebg-preview_10: 357593584585429795
+      STable_Baobab_tree-removebg-preview_11: -8334362618930256754
+      STable_Baobab_tree-removebg-preview_2: -4878542989271743261
+      STable_Baobab_tree-removebg-preview_3: 3696283648579597231
+      STable_Baobab_tree-removebg-preview_4: 4404427116685862895
+      STable_Baobab_tree-removebg-preview_5: 3093314107782469474
+      STable_Baobab_tree-removebg-preview_6: 8213312366314302316
+      STable_Baobab_tree-removebg-preview_7: -4207839424970649913
+      STable_Baobab_tree-removebg-preview_8: 5446748267467377486
+      STable_Baobab_tree-removebg-preview_9: 2048978295033345963
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
