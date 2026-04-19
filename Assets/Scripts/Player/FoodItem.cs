@@ -3,7 +3,10 @@ using UnityEngine;
 public class FoodItem : MonoBehaviour
 {
     public bool isHealthy = true;
-    public Transform player; // assign player if possible
+    public string foodName;
+
+    public Transform player;
+    public float destroyDistance = 10f;
 
     private void Start()
     {
@@ -17,27 +20,22 @@ public class FoodItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (!collision.CompareTag("Player")) return;
+
+        RunManager manager = Object.FindFirstObjectByType<RunManager>();
+
+        if (manager != null)
         {
-            RunManager manager = Object.FindFirstObjectByType<RunManager>();
-
-            if(manager != null)
-            {
-                manager.RegisterChoice(isHealthy);
-            }
-
-            Destroy(gameObject);
+            manager.RegisterChoice(isHealthy, foodName);
         }
+
+        Destroy(gameObject);
     }
 
     void Update()
     {
-        // If the game is a "runner" where the player moves forward, 
-        // the food should stay at its spawned X position.
-        // If the player is stationary and food "moves" towards them:
-        // transform.Translate(Vector2.left * speed * Time.deltaTime);
-
-        if(player != null && transform.position.x < player.position.x - 10)
+        // Clean up off-screen objects
+        if (player != null && transform.position.x < player.position.x - destroyDistance)
         {
             Destroy(gameObject);
         }

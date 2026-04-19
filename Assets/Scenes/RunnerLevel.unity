@@ -1547,7 +1547,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.81, y: 6.54}
+  m_Size: {x: 3.81, y: 5}
   m_EdgeRadius: 0
 --- !u!50 &1656708224
 Rigidbody2D:
@@ -1666,8 +1666,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96697c9f2330e944a847575dca3baff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodSpawner
-  healthyFoodPrefab: {fileID: 6661348959827052471, guid: b56b4dcf111f4c343a813f3e8205832d, type: 3}
-  junkFoodPrefab: {fileID: 3770548820478177012, guid: 818cef8ff098fd94ab735208ad08db84, type: 3}
+  healthyFoodPrefabs:
+  - {fileID: 8017659427135190339, guid: 9c12e8e9ca244d74fa97565fed605229, type: 3}
+  - {fileID: 3471242635547371307, guid: d217d31b24eaafb43b39c1141000c7c9, type: 3}
+  - {fileID: 51943084688876363, guid: 196a47fb31a05534784907fe36efa213, type: 3}
+  - {fileID: 4036393572882301411, guid: b679d37d5811b144f821e6f207ce0961, type: 3}
+  junkFoodPrefabs:
+  - {fileID: 1994759084051561458, guid: be94fe99c2b8d4c468bb1c4b29a0a953, type: 3}
+  - {fileID: 3614634941040899165, guid: d999d4d60f27a3e428b44bea7308a373, type: 3}
+  - {fileID: 6556763936235661533, guid: 16a104569ce016b44b1eb5fee3fccac1, type: 3}
+  - {fileID: 6372847927612271037, guid: 912b86d70b9bef8468f7f2c3e653cda2, type: 3}
   spawnDistance: 10
   player: {fileID: 1656708226}
 --- !u!4 &1697635001

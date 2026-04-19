@@ -8,26 +8,25 @@ public class RunManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f; // ensure game runs normally
+        Time.timeScale = 1f;
     }
 
-    // Called when player picks food
-    public void RegisterChoice(bool healthy)
+    // UPDATED: now includes food name
+    public void RegisterChoice(bool healthy, string foodName)
     {
         totalChoices++;
 
         if (healthy)
         {
             goodChoices++;
-            Debug.Log("Healthy choice!");
+            Debug.Log("✔ Healthy choice: " + foodName);
         }
         else
         {
-            Debug.Log("Unhealthy choice!");
+            Debug.Log("❌ Unhealthy choice: " + foodName);
         }
     }
 
-    // Calculate performance %
     public float GetPerformancePercent()
     {
         if (totalChoices == 0) return 0f;
@@ -35,7 +34,6 @@ public class RunManager : MonoBehaviour
         return (goodChoices / (float)totalChoices) * 100f;
     }
 
-    // Called when run ends
     public void EndRun()
     {
         Time.timeScale = 0f;

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class FoodSpawner : MonoBehaviour
 {
-    public GameObject healthyFoodPrefab;
-    public GameObject junkFoodPrefab;
+    public GameObject[] healthyFoodPrefabs;
+    public GameObject[] junkFoodPrefabs;
 
     public float spawnDistance = 10f;
     public Transform player;
@@ -13,15 +13,21 @@ public class FoodSpawner : MonoBehaviour
 
     void Start()
     {
-        if (healthyFoodPrefab == null || junkFoodPrefab == null)
+        if (healthyFoodPrefabs == null || healthyFoodPrefabs.Length == 0)
         {
-            Debug.LogError("FoodSpawner: Assign both healthy and junk food prefabs in the Inspector!");
+            Debug.LogError("FoodSpawner: No healthy prefabs assigned!");
+            return;
+        }
+
+        if (junkFoodPrefabs == null || junkFoodPrefabs.Length == 0)
+        {
+            Debug.LogError("FoodSpawner: No junk prefabs assigned!");
             return;
         }
 
         if (player == null)
         {
-            Debug.LogError("FoodSpawner: Assign the player Transform in the Inspector!");
+            Debug.LogError("FoodSpawner: Player not assigned!");
             return;
         }
 
@@ -32,7 +38,6 @@ public class FoodSpawner : MonoBehaviour
     {
         while (true)
         {
-            // Only spawn if player exists
             if (player != null)
             {
                 SpawnChoice();
@@ -42,8 +47,7 @@ public class FoodSpawner : MonoBehaviour
                 Debug.LogWarning("FoodSpawner: Player missing, skipping spawn.");
             }
 
-            // wait before spawning next batch
-            yield return new WaitForSeconds(Random.Range(2f, 4f)); // shorter interval for more frequent spawns
+            yield return new WaitForSeconds(Random.Range(2f, 4f));
         }
     }
 
@@ -53,6 +57,7 @@ public class FoodSpawner : MonoBehaviour
 
         float spawnX = player.position.x + spawnDistance;
 
+        // pick random lanes
         int healthyLane = Random.Range(0, lanes.Length);
         int junkLane = Random.Range(0, lanes.Length);
 
@@ -61,21 +66,17 @@ public class FoodSpawner : MonoBehaviour
             junkLane = Random.Range(0, lanes.Length);
         }
 
-        // Use player's base Y (0) or a fixed offset if lanes are relative to player
         Vector3 healthyPos = new Vector3(spawnX, lanes[healthyLane], 0);
         Vector3 junkPos = new Vector3(spawnX, lanes[junkLane], 0);
 
-        try
-        {
-            if (healthyFoodPrefab != null)
-                Instantiate(healthyFoodPrefab, healthyPos, Quaternion.identity);
+        // pick random prefabs
+        GameObject healthyPrefab =
+            healthyFoodPrefabs[Random.Range(0, healthyFoodPrefabs.Length)];
 
-            if (junkFoodPrefab != null)
-                Instantiate(junkFoodPrefab, junkPos, Quaternion.identity);
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogError("FoodSpawner: Error instantiating food prefabs: " + e.Message);
-        }
+        GameObject junkPrefab =
+            junkFoodPrefabs[Random.Range(0, junkFoodPrefabs.Length)];
+
+        Instantiate(healthyPrefab, healthyPos, Quaternion.identity);
+        Instantiate(junkPrefab, junkPos, Quaternion.identity);
     }
 }
