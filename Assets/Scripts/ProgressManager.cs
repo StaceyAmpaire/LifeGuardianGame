@@ -59,8 +59,4 @@ public class ProgressManager : MonoBehaviour
     Debug.Log("Progress reset");
     //to reset for lecturer: PlayerPrefs.DeleteAll();
 }
-public bool IsLevelUnlocked(int requiredDew)
-{
-    return totalHealingDew >= requiredDew;
-}
 }
