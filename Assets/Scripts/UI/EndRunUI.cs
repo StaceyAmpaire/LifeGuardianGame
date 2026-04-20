@@ -46,7 +46,7 @@ public class EndRunUI : MonoBehaviour
     void OnNextLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("RunnerLevel");
+        SceneManager.LoadScene("LevelSelection");
     }
 
     void OnClosePopup()

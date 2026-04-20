@@ -6,13 +6,13 @@ public class MainHubButtons : MonoBehaviour
     public void StartPreventionRun()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("RunnerLevel");
+       SceneManager.LoadScene("LevelSelection");
     }
 
     public void StartManagementRun()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("RunnerLevel");
+        SceneManager.LoadScene("LevelSelection");
     }
 
     public void OpenDailyQuests()
