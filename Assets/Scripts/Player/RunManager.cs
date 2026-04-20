@@ -22,15 +22,11 @@ public class RunManager : MonoBehaviour
         {
             goodChoices++;
             score += 10;
-
-            Debug.Log("✔ Healthy choice: " + foodName + " (+10)");
         }
         else
         {
             badChoices++;
             score -= 5;
-
-            Debug.Log("❌ Unhealthy choice: " + foodName + " (-5)");
         }
 
         score = Mathf.Max(0, score);
@@ -42,26 +38,17 @@ public class RunManager : MonoBehaviour
 
         return (goodChoices / (float)totalChoices) * 100f;
     }
-
+  private bool runEnded = false;
     public void EndRun()
-    {
-        Time.timeScale = 0f;
-
-        float performance = GetPerformancePercent();
-
-        Debug.Log("Run ended!");
-        Debug.Log("Score: " + score);
-        Debug.Log("Performance: " + performance + "%");
-
-        EndRunUI popupUI = FindFirstObjectByType<EndRunUI>();
-
-       if (popupUI != null)
 {
-    popupUI.ShowPopup();
+    if (runEnded) return;   // 🔥 STOP DUPLICATES
+    runEnded = true;
+
+    Time.timeScale = 0f;
+
+    EndRunUI ui = FindFirstObjectByType<EndRunUI>();
+
+    if (ui != null)
+        ui.ShowPopup(score, GetPerformancePercent(), goodChoices, badChoices);
 }
-else
-{
-    SceneManager.LoadScene("MainHub");
-}
-    }
 }

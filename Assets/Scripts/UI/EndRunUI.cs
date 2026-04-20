@@ -6,42 +6,38 @@ using UnityEngine.SceneManagement;
 public class EndRunUI : MonoBehaviour
 {
     public GameObject popup;
+
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI healingDewText;
     public TextMeshProUGUI performanceText;
+    public TextMeshProUGUI healingDewText;
 
     public Button nextLevelButton;
     public Button closeButton;
-
-    private RunManager runManager;
+    private bool hasShown = false;
 
     void Start()
     {
-        runManager = FindFirstObjectByType<RunManager>();
-
         popup.SetActive(false);
 
         nextLevelButton.onClick.AddListener(OnNextLevel);
         closeButton.onClick.AddListener(OnClosePopup);
     }
 
-    public void ShowPopup()
-    {
-        if (runManager == null)
-            runManager = FindFirstObjectByType<RunManager>();
+    public void ShowPopup(int score, float performance, int good, int bad)
+{
+    if (hasShown) return;
+    hasShown = true;
 
-        float performance = runManager.GetPerformancePercent();
+    int healingDew = Mathf.RoundToInt(performance);
 
-        int healingDew = Mathf.RoundToInt(performance);
+    ProgressManager.instance.AddHealingDew(healingDew);
 
-        EcoSystemHealthManager.instance.AddHealingDew(healingDew);
+    scoreText.text = "Score: " + score;
+    performanceText.text = "Performance: " + Mathf.RoundToInt(performance) + "%";
+    healingDewText.text = "Healing Dew: " + healingDew;
 
-        scoreText.text = "Score: " + Mathf.RoundToInt(performance) + "%";
-        performanceText.text = "Performance: " + healingDew + "%";
-        healingDewText.text = "Healing Dew: " + healingDew;
-
-        popup.SetActive(true);
-    }
+    popup.SetActive(true);
+}
 
     void OnNextLevel()
     {
@@ -52,8 +48,6 @@ public class EndRunUI : MonoBehaviour
     void OnClosePopup()
     {
         Time.timeScale = 1f;
-        popup.SetActive(false);
-
         SceneManager.LoadScene("MainHub");
     }
 }

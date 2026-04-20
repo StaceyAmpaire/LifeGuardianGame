@@ -3,12 +3,11 @@ using UnityEngine;
 public class RunnerController : MonoBehaviour
 {
     public float forwardSpeed = 5f;
-
     public float[] lanePositions = { -2.5f, 0f, 2.5f };
 
     private int currentLane = 1;
-
     public float runDistance = 100f;
+    private bool hasEnded = false;
     private float startX;
 
     void Start()
@@ -18,33 +17,29 @@ public class RunnerController : MonoBehaviour
 
     void Update()
     {
-        // move forward
         transform.Translate(Vector2.right * forwardSpeed * Time.deltaTime);
 
-        // lane switching
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             currentLane = Mathf.Clamp(currentLane + 1, 0, 2);
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             currentLane = Mathf.Clamp(currentLane - 1, 0, 2);
 
-        Vector3 targetPosition = new Vector3(
+        Vector3 target = new Vector3(
             transform.position.x,
             lanePositions[currentLane],
             transform.position.z
         );
 
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 10);
+        transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime * 10);
 
-        // check if run finished
-        if (transform.position.x >= startX + runDistance)
-        {
-            RunManager manager = FindFirstObjectByType<RunManager>();
+        if (!hasEnded && transform.position.x >= startX + runDistance)
+{
+    hasEnded = true;
 
-            if (manager != null)
-                manager.EndRun();
-            else
-                Debug.LogError("RunManager not found!");
-        }
+    RunManager rm = FindFirstObjectByType<RunManager>();
+    if (rm != null)
+        rm.EndRun();
+}
     }
 }

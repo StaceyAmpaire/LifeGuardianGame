@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI\EndRunUI.cs" />
     <Compile Include="Assets\Scripts\Player\RunnerController.cs" />
+    <Compile Include="Assets\Scripts\ProgressManager.cs" />
     <Compile Include="Assets\Scripts\Player\FoodItem.cs" />
     <Compile Include="Assets\Scripts\Player\AvatarBodyController.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelectionUI.cs" />
