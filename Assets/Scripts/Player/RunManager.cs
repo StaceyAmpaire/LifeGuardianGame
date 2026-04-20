@@ -5,13 +5,15 @@ public class RunManager : MonoBehaviour
 {
     public int totalChoices = 0;
     public int goodChoices = 0;
+    public int badChoices = 0;
+
+    public int score = 0;
 
     void Start()
     {
         Time.timeScale = 1f;
     }
 
-    // UPDATED: now includes food name
     public void RegisterChoice(bool healthy, string foodName)
     {
         totalChoices++;
@@ -19,12 +21,19 @@ public class RunManager : MonoBehaviour
         if (healthy)
         {
             goodChoices++;
-            Debug.Log("✔ Healthy choice: " + foodName);
+            score += 10;
+
+            Debug.Log("✔ Healthy choice: " + foodName + " (+10)");
         }
         else
         {
-            Debug.Log("❌ Unhealthy choice: " + foodName);
+            badChoices++;
+            score -= 5;
+
+            Debug.Log("❌ Unhealthy choice: " + foodName + " (-5)");
         }
+
+        score = Mathf.Max(0, score);
     }
 
     public float GetPerformancePercent()
@@ -40,18 +49,19 @@ public class RunManager : MonoBehaviour
 
         float performance = GetPerformancePercent();
 
-        Debug.Log("Run ended. Performance: " + performance + "%");
+        Debug.Log("Run ended!");
+        Debug.Log("Score: " + score);
+        Debug.Log("Performance: " + performance + "%");
 
         EndRunUI popupUI = FindFirstObjectByType<EndRunUI>();
 
-        if (popupUI != null)
-        {
-            popupUI.ShowPopup();
-        }
-        else
-        {
-            Debug.LogWarning("EndRunUI not found. Loading MainHub.");
-            SceneManager.LoadScene("MainHub");
-        }
+       if (popupUI != null)
+{
+    popupUI.ShowPopup();
+}
+else
+{
+    SceneManager.LoadScene("MainHub");
+}
     }
 }

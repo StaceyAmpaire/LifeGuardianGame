@@ -8,6 +8,7 @@ public class EndRunUI : MonoBehaviour
     public GameObject popup;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI healingDewText;
+    public TextMeshProUGUI performanceText;
 
     public Button nextLevelButton;
     public Button closeButton;
@@ -36,6 +37,7 @@ public class EndRunUI : MonoBehaviour
         EcoSystemHealthManager.instance.AddHealingDew(healingDew);
 
         scoreText.text = "Score: " + Mathf.RoundToInt(performance) + "%";
+        performanceText.text = "Performance: " + healingDew + "%";
         healingDewText.text = "Healing Dew: " + healingDew;
 
         popup.SetActive(true);
